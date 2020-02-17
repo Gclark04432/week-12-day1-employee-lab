@@ -1,4 +1,4 @@
-public class Employee {
+public abstract class Employee {
     private String name;
     private String NINumber;
     private int salary;
@@ -23,7 +23,7 @@ public class Employee {
     }
 
     public void raiseSalary(double increase){
-        this.salary *= increase;
+        this.salary += increase;
     }
 
     public double payBonus(){
