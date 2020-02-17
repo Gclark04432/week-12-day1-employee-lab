@@ -1,3 +1,7 @@
+package employee.management;
+
+import employee.Employee;
+
 public class Manager extends Employee {
     private String departmentName;
 
