@@ -27,4 +27,24 @@ public class DeveloperTest {
         assertEquals(50000, developer.getSalary());
     }
 
+    @Test
+    public void raiseSalaryDoesNotChangeIfNegativePassedIn(){
+        developer.raiseSalary(-10000);
+        assertEquals(50000, developer.getSalary());
+    }
+
+    @Test
+    public void userCanChangeName(){
+        developer.setName("Steven");
+        assertEquals("Steven", developer.getName());
+    }
+
+    @Test
+    public void userCannotChangeNameToNull(){
+        developer.setName(null);
+        assertEquals("Jim", developer.getName());
+    }
+
+
+
 }
