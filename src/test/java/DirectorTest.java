@@ -1,6 +1,7 @@
 import employee.management.Director;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
 
 import static org.junit.Assert.assertEquals;
 
@@ -35,5 +36,10 @@ public class DirectorTest {
     @Test
     public void director_has_budget(){
         assertEquals(100000, director.getBudget(), 0.01);
+    }
+
+    @Test
+    public void director_can_have_pay_bonus_2_percent(){
+        assertEquals(1300, director.payBonus(), 0.01);
     }
 }
